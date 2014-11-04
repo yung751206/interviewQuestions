@@ -10,9 +10,8 @@
 #include <iostream>
 #include <string>
 
-void printNumofLetterinString(std::string sentence){
-    int frequencyArray[26];                     //FrequencyArray is used to store the frequency of the letter.
-    for(int i=0;i<26;i++){                      //Initialize frequencyArray to all zero.
+void printNumofLetterinString(std::string sentence,int frequencyArray[26]){
+    for(int i=0;i<26;i++){
         frequencyArray[i] = 0;
     }
     int ascii;
@@ -20,11 +19,11 @@ void printNumofLetterinString(std::string sentence){
         if(!isalpha(sentence[i])){
             continue;
         }
-        ascii = tolower(sentence[i]) - 'a';      //Convert A-Za-z to number between 0-25.
+        ascii = tolower(sentence[i]) - 'a';
         frequencyArray[ascii]++;
     }
-    for(int i=0;i<26;i++){                      //Find the biggest number in frequencyArray, print it, then set it to zero
-                                                //and find the next biggest number.
+    for(int i=0;i<26;i++){
+        
         int max = frequencyArray[0];            
         int index = 0;
         for(int j=0;j<26;j++){

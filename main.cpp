@@ -7,12 +7,11 @@
 //
 
 #include <iostream>
-#include "reverseString.h"
+#include "palindrome.h"
+
 
 int main(int argc, const char * argv[]) {
-    std::string word;
-    getline(std::cin,word);
-    reverseString(word);
-    std::cout<<word<<std::endl;
+
+    std::cout<<isPalindrome("race a car")<<std::endl;;
     return 0;
 }
